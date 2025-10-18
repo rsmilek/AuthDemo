@@ -1,9 +1,16 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WeatherForecast.Controllers
 {
+    /// <summary>
+    /// Example of JWT protected WeatherForecast controller.
+    /// To access the endpoints you must provide a valid JWT token in the 'Authorization' header.
+    /// The token can be obtained from the Auth API after a successful login.
+    /// </summary>
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/weatherforecast")]
+    [Authorize] // PROTECT THE ENDPOINTS WITH JWT AUTHENTICATION
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
