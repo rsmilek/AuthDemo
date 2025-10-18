@@ -10,7 +10,7 @@ namespace WeatherForecast.Controllers
     /// </summary>
     [ApiController]
     [Route("api/weatherforecast")]
-    [Authorize] // PROTECT THE ENDPOINTS WITH JWT AUTHENTICATION
+    [Authorize] // PROTECT THE ENDPOINTS WITH JWT AUTHORIZATION
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
